@@ -1,5 +1,5 @@
 import { component$, Slot } from '@builder.io/qwik'
-import { routeLoader$ } from '@builder.io/qwik-city'
+import { Link, routeLoader$, useLocation } from '@builder.io/qwik-city'
 import type { RequestHandler } from '@builder.io/qwik-city'
 import { css } from '~/styled-system/css'
 
@@ -20,10 +20,96 @@ export const useServerTimeLoader = routeLoader$(() => {
   }
 })
 
+// Styles
+const navMenu = css({
+  padding: '20px 0',
+  boxShadow: '0px 0px 20px rgba(0,0,0,0.1)',
+  position: 'fixed',
+  left: 0,
+  right: 0,
+  zIndex: 10,
+  backdropFilter: 'blur(8px)',
+  backgroundColor: '#ffffff80',
+})
+const menuItemCtn = css({
+  position: 'relative',
+  fontSize: 22,
+  fontWeight: 300,
+  padding: '0 8px 2px',
+  overflow: 'hidden',
+  '&:hover': {
+    '& i': {
+      backgroundColor: '#f0f0f0',
+      height: 2,
+      display: 'block',
+      position: 'absolute',
+      width: '100%',
+      left: 0,
+      right: 0,
+      bottom: 1,
+      zIndex: -1,
+      transition: 'all 0.3s ease-out',
+    },
+  },
+})
+
+const activeMenuItem = css({
+  background: `linear-gradient(to right, #b3d3ff, #b3f0ff)`,
+  height: 4,
+  display: 'block',
+  position: 'absolute',
+  width: '100%',
+  left: 0,
+  right: 0,
+  bottom: 0,
+  zIndex: -1,
+  transition: 'all 0.3s ease-in',
+})
+
+const inactiveMenuItem = css({
+  left: '-100%',
+})
+
+// Constants
+const allPathNames = {
+  webApps: '/web-apps/',
+  mobileApps: '/mobile-apps/',
+  designWorks: '/design-works/',
+} as const
+
+// Components
+const MenuItem = component$<{ itemPathName: string; itemLabel: string }>(({ itemPathName, itemLabel }) => {
+  const {
+    url: { pathname },
+  } = useLocation()
+
+  return (
+    <li class={menuItemCtn}>
+      <i class={css({ left: '-100%' })}></i>
+      <span class={pathname === itemPathName ? activeMenuItem : inactiveMenuItem}></span>
+      <Link href={itemPathName}>{itemLabel}</Link>
+    </li>
+  )
+})
+
 export default component$(() => {
   return (
     <>
-      <header class={css({ fontSize: 20, bg: 'yellow.400' })}>This is header</header>
+      <header class={css({ height: 110 })}>
+        <nav class={navMenu}>
+          <ul
+            class={css({
+              display: 'flex',
+              gap: '50px',
+              justifyContent: 'center',
+            })}
+          >
+            <MenuItem itemPathName={allPathNames.webApps} itemLabel="Web Apps" />
+            <MenuItem itemPathName={allPathNames.mobileApps} itemLabel="Mobile Apps" />
+            <MenuItem itemPathName={allPathNames.designWorks} itemLabel="Design Works" />
+          </ul>
+        </nav>
+      </header>
       <main>
         <Slot />
       </main>
