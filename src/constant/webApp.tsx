@@ -14,17 +14,17 @@ const cardImg = css({
 export const WEB_APPS_ARRAY = [
   {
     title: 'Staff Management Portal',
-    img: <StaffManagement class={cardImg} />,
+    img: <StaffManagement class={cardImg} alt="Screenshot of Staff Management Portal" />,
     description:
-      'Manage staff skills and projects with ease. Get a great idea on who have all required skills and are ready for next project with a glance. ',
+      'Get a great idea on who are experts on required skills and are ready for next project with a glance. Add/edit individual employee or upload a csv file to create/update multiple ones.',
     hover: '',
-    href: 'https://cheerup-ten.vercel.app/',
+    href: 'https://staff-management-portal.vercel.app/',
     techs: ['Next.js', 'PostgreSQL', 'Prisma', 'tRPC', 'Vercel'],
     isOnGoing: true,
   },
   {
     title: 'Cheer Up',
-    img: <CheerUp class={cardImg} />,
+    img: <CheerUp class={cardImg} alt="Screenshot of Cheer up" />,
     description:
       'Login with your spotify account and enjoy personalized recommendation based on your tastes. The beautiful seamless transition makes everything more enjoyable!',
     hover: '',
@@ -33,7 +33,7 @@ export const WEB_APPS_ARRAY = [
   },
   {
     title: 'PChem Consulting Inc.',
-    img: <PchemConsulting class={cardImg} />,
+    img: <PchemConsulting class={cardImg} alt="Screenshot of PChem Consulting Inc." />,
     description:
       'Well designed UI with responsive support make it pleasant to read and use on both larger and small screens .',
     hover: '',
@@ -42,7 +42,7 @@ export const WEB_APPS_ARRAY = [
   },
   {
     title: 'Hanson Agrochemical Consulting',
-    img: <HansonAgrochemical class={cardImg} />,
+    img: <HansonAgrochemical class={cardImg} alt="Screenshot of Hanson Agrochemical Consulting" />,
     description:
       'Responsive design, multi-language support and elegant transition make it enjoyable to use for more people.',
     hover: '',
@@ -51,7 +51,7 @@ export const WEB_APPS_ARRAY = [
   },
   {
     title: 'Movie Recommendation',
-    img: <MovieRec class={cardImg} />,
+    img: <MovieRec class={cardImg} alt="Screenshot of Movie Recommendation" />,
     description: 'Integrated with The Movie DB API to help you find your next favorite movie and TV series!',
     hover: '',
     href: 'https://linkfang.github.io/API-Project/',
