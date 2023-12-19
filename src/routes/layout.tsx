@@ -31,6 +31,7 @@ const navMenu = css({
   backdropFilter: 'blur(8px)',
   backgroundColor: '#ffffff80',
 })
+
 const menuItemCtn = css({
   position: 'relative',
   fontSize: 22,
@@ -40,6 +41,7 @@ const menuItemCtn = css({
   '&:hover': {
     '& i': {
       backgroundColor: '#f0f0f0',
+      borderRadius: '2px',
       height: 2,
       display: 'block',
       position: 'absolute',
@@ -54,7 +56,8 @@ const menuItemCtn = css({
 })
 
 const activeMenuItem = css({
-  background: `linear-gradient(to right, #b3d3ff, #b3f0ff)`,
+  background: 'linear-gradient(to right, #b3d3ff, #b3f0ff)',
+  borderRadius: '2px',
   height: 4,
   display: 'block',
   position: 'absolute',
@@ -95,7 +98,7 @@ const MenuItem = component$<{ itemPathName: string; itemLabel: string }>(({ item
 export default component$(() => {
   return (
     <>
-      <header class={css({ height: 110 })}>
+      <header class={css({ height: 130 })}>
         <nav class={navMenu}>
           <ul
             class={css({
