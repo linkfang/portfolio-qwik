@@ -1,8 +1,17 @@
 import { component$ } from '@builder.io/qwik'
 import type { DocumentHead } from '@builder.io/qwik-city'
+import { MobileAppCard } from '~/components/MobileAppCard'
+import { MOBILE_APPS_ARRAY } from '~/constant/mobileApp'
+import { css } from '~/styled-system/css'
 
 export default component$(() => {
-  return <>Hello Mobile apps</>
+  return (
+    <div class={css({ display: 'flex', flexWrap: 'wrap', gap: 35, justifyContent: 'center' })}>
+      {MOBILE_APPS_ARRAY.map((webApp) => (
+        <MobileAppCard key={webApp.title} {...webApp} />
+      ))}
+    </div>
+  )
 })
 
 export const head: DocumentHead = {

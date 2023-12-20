@@ -125,7 +125,7 @@ export default component$(() => {
           alignItems: 'center',
         })}
       >
-        Built with Qwik{' '}
+        Built with Qwik
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 500 500" width="30px">
           <g clip-path="url(#a)">
             <circle cx="250" cy="250" r="250" fill="#fff" />
