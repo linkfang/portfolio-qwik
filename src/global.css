@@ -26,4 +26,6 @@ body{
   min-height: 100svh;
   padding: 0 60px 120px 60px;
   position: relative;
+  background-image: url("/bg.png");
+  background-attachment: fixed;
 }

@@ -14,6 +14,7 @@ export const Footer = component$(() => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        bg: 'transparent',
       })}
     >
       Built with Qwik

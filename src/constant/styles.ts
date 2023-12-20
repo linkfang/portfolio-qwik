@@ -2,6 +2,7 @@ import { css } from '~/styled-system/css'
 
 export const cardCtn = css.raw({
   boxShadow: '0px 0px 20px rgba(0,0,0,0.1)',
+  backgroundColor: '#fff',
   width: 300,
   overflow: 'hidden',
   transition: 'all 0.25s ease-out',

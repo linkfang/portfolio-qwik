@@ -114,10 +114,12 @@ export default component$(() => {
           </ul>
         </nav>
       </header>
+      {/* <div class={css({ backgroundImage: 'url("/bg-t.svg")' })}> */}
       <main>
         <Slot />
       </main>
       <Footer />
+      {/* </div> */}
     </>
   )
 })
