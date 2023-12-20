@@ -1,28 +1,13 @@
 import { css } from '~/styled-system/css'
 
-export const cardCtn = css.raw({
-  boxShadow: '0px 0px 20px rgba(0,0,0,0.1)',
-  backgroundColor: '#fff',
-  width: 300,
-  overflow: 'hidden',
-  transition: 'all 0.25s ease-out',
-  position: 'relative',
-  borderRadius: '3px',
-  '&:hover': {
-    boxShadow: '0px 0px 25px rgba(0,0,0,0.16)',
-    transform: 'translateY(-4px)',
-    '& .preview-bg': { width: 90 },
-  },
-})
-
-export const textCtn = css.raw({
+export const textCtn = css({
   padding: '8px 15px',
   display: 'flex',
   flexDirection: 'column',
   gap: '10px',
 })
 
-export const previewCtn = css.raw({
+export const previewCtn = css({
   position: 'absolute',
   width: '10px',
   height: '35px',
@@ -33,14 +18,14 @@ export const previewCtn = css.raw({
   borderLeftRadius: '2px',
 })
 
-export const previewText = css.raw({
+export const previewText = css({
   position: 'absolute',
   color: '#1A3966',
   right: '25px',
   bottom: '33px',
 })
 
-export const chips = css.raw({
+export const chips = css({
   backgroundColor: 'gray.200',
   padding: '2px 12px',
   borderRadius: 20,
@@ -48,7 +33,7 @@ export const chips = css.raw({
   color: 'gray.600',
 })
 
-export const inProgressCtn = css.raw({
+export const inProgressCtn = css({
   padding: '5px 10px',
   position: 'absolute',
   top: '25px',
@@ -62,7 +47,7 @@ export const inProgressCtn = css.raw({
   borderRadius: '2px',
 })
 
-export const cardImg = css.raw({
+export const cardImg = css({
   borderBottom: '3px solid black',
   borderImage: 'linear-gradient(to right, #b3d3ff, #b3f0ff) 30',
 })

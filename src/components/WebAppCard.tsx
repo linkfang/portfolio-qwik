@@ -2,9 +2,24 @@ import { component$ } from '@builder.io/qwik'
 import { css } from '~/styled-system/css'
 import BatteryCharging from '~/media/icons/battery-charging.svg?jsx'
 import type { JSX } from '@builder.io/qwik/jsx-runtime'
-import { cardCtn, chips, inProgressCtn } from '~/constant/styles'
+import { chips, inProgressCtn } from '~/constant/styles'
 
 // Styles
+const cardCtn = css({
+  boxShadow: '0px 0px 20px rgba(0,0,0,0.1)',
+  backgroundColor: '#fff',
+  width: 500,
+  overflow: 'hidden',
+  transition: 'all 0.25s ease-out',
+  position: 'relative',
+  borderRadius: '3px',
+  '&:hover': {
+    boxShadow: '0px 0px 25px rgba(0,0,0,0.16)',
+    transform: 'translateY(-4px)',
+    '& .preview-bg': { width: 130 },
+  },
+})
+
 const textCtn = css({
   padding: 25,
   display: 'flex',
@@ -46,7 +61,7 @@ type TWebAppCardProps = {
 // Components
 export const WebAppCard = component$<TWebAppCardProps>(({ title, techs, description, href, img, isOnGoing }) => {
   return (
-    <div class={css(cardCtn, css.raw({ width: 500, '&:hover': { '& .preview-bg': { width: 130 } } }))}>
+    <div class={cardCtn}>
       {img}
 
       <div class={textCtn}>
@@ -54,7 +69,7 @@ export const WebAppCard = component$<TWebAppCardProps>(({ title, techs, descript
 
         <div class={css({ display: 'flex', gap: '10px' })}>
           {techs.map((tech) => (
-            <span key={tech} class={css(chips)}>
+            <span key={tech} class={chips}>
               {tech}
             </span>
           ))}
@@ -71,7 +86,7 @@ export const WebAppCard = component$<TWebAppCardProps>(({ title, techs, descript
       </div>
 
       {isOnGoing && (
-        <div class={css(inProgressCtn)}>
+        <div class={inProgressCtn}>
           <BatteryCharging class={css({ width: '18px', height: '18px', borderRadius: 20 })} />
           In Progress
         </div>
