@@ -30,7 +30,7 @@ export const MobileAppCard = component$<TMobileAppCardProps>(({ title, techs, hr
         </div>
 
         <div class={css({ textAlign: 'right' })}>
-          <a href={href} target="blank" rel="noopener noreferrer" class={previewCtn}></a>
+          <a href={href} target="blank" rel="noopener noreferrer" class={[css(previewCtn), 'preview-bg']}></a>
           <a href={href} target="blank" rel="noopener noreferrer" class={css(previewText)}>
             Repo
           </a>

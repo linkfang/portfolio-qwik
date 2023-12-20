@@ -99,7 +99,7 @@ const MenuItem = component$<{ itemPathName: string; itemLabel: string }>(({ item
 export default component$(() => {
   return (
     <>
-      <header class={css({ height: 130 })}>
+      <header class={css({ height: 140 })}>
         <nav class={navMenu}>
           <ul
             class={css({

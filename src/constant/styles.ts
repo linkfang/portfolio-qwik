@@ -2,7 +2,7 @@ import { css } from '~/styled-system/css'
 
 export const cardCtn = css.raw({
   boxShadow: '0px 0px 20px rgba(0,0,0,0.1)',
-  width: 310,
+  width: 300,
   overflow: 'hidden',
   transition: 'all 0.25s ease-out',
   position: 'relative',
@@ -21,19 +21,16 @@ export const textCtn = css.raw({
   gap: '10px',
 })
 
-export const previewCtn = [
-  css({
-    position: 'absolute',
-    width: '10px',
-    height: '35px',
-    backgroundColor: 'linear-gradient(to right, #b3d3ff, #b3f0ff)',
-    right: 0,
-    bottom: '28px',
-    transition: 'all 0.25s ease-out',
-    borderLeftRadius: '2px',
-  }),
-  'preview-bg',
-]
+export const previewCtn = css.raw({
+  position: 'absolute',
+  width: '10px',
+  height: '35px',
+  backgroundColor: 'linear-gradient(to right, #b3d3ff, #b3f0ff)',
+  right: 0,
+  bottom: '28px',
+  transition: 'all 0.25s ease-out',
+  borderLeftRadius: '2px',
+})
 
 export const previewText = css.raw({
   position: 'absolute',
@@ -62,4 +59,9 @@ export const inProgressCtn = css.raw({
   gap: 2,
   fontSize: 14,
   borderRadius: '2px',
+})
+
+export const cardImg = css.raw({
+  borderBottom: '3px solid black',
+  borderImage: 'linear-gradient(to right, #b3d3ff, #b3f0ff) 30',
 })

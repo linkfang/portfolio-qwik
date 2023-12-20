@@ -5,6 +5,10 @@ export const Footer = component$(() => {
   return (
     <footer
       class={css({
+        position: 'absolute',
+        left: 0,
+        right: 0,
+        bottom: 0,
         color: 'gray.500',
         padding: '60px 0 30px 0',
         display: 'flex',

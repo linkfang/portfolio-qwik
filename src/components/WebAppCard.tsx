@@ -30,7 +30,7 @@ const previewText = css({
   position: 'absolute',
   color: '#1A3966',
   right: '35px',
-  bottom: '31px',
+  bottom: '30px',
 })
 
 // Types
@@ -46,7 +46,7 @@ type TWebAppCardProps = {
 // Components
 export const WebAppCard = component$<TWebAppCardProps>(({ title, techs, description, href, img, isOnGoing }) => {
   return (
-    <div class={css(cardCtn, css.raw({ width: 500, '&:hover': { '& .preview-bg': { width: 125 } } }))}>
+    <div class={css(cardCtn, css.raw({ width: 500, '&:hover': { '& .preview-bg': { width: 130 } } }))}>
       {img}
 
       <div class={textCtn}>
@@ -65,7 +65,7 @@ export const WebAppCard = component$<TWebAppCardProps>(({ title, techs, descript
         <div class={css({ textAlign: 'right', height: '30px' })}>
           <a href={href} target="blank" rel="noopener noreferrer" class={previewCtn}></a>
           <a href={href} target="blank" rel="noopener noreferrer" class={previewText}>
-            Preview
+            Try it out
           </a>
         </div>
       </div>

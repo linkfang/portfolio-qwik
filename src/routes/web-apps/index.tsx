@@ -6,7 +6,7 @@ import { WEB_APPS_ARRAY } from '~/constant/webApp'
 
 export default component$(() => {
   return (
-    <div class={css({ display: 'flex', flexWrap: 'wrap', gap: 35, justifyContent: 'center' })}>
+    <div class={css({ display: 'flex', flexWrap: 'wrap', gap: '45px', justifyContent: 'center' })}>
       {WEB_APPS_ARRAY.map((webApp) => (
         <WebAppCard key={webApp.title} {...webApp} />
       ))}

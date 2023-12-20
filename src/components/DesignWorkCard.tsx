@@ -11,18 +11,22 @@ type TDesignWorkCardProps = {
 
 export const DesignWorkCard = component$<TDesignWorkCardProps>(({ title, href, img }) => {
   return (
-    <div class={css(cardCtn)}>
+    <div class={css(cardCtn, css.raw({ width: 'auto' }))}>
       {img}
 
-      <div class={css(textCtn)}>
-        <h2 class={css({ fontSize: 20, marginBottom: '-5px', color: '#2A538C' })}>{title}</h2>
-
-        <div class={css({ textAlign: 'right' })}>
-          <a href={href} target="blank" rel="noopener noreferrer" class={previewCtn}></a>
-          <a href={href} target="blank" rel="noopener noreferrer" class={css(previewText)}>
-            Repo
-          </a>
-        </div>
+      <div class={css(textCtn, css.raw({ padding: '15px 20px' }))}>
+        <h2 class={css({ fontSize: 20, color: '#2A538C' })}>{title}</h2>
+      </div>
+      <div class={css({ textAlign: 'right' })}>
+        <a
+          href={href}
+          target="blank"
+          rel="noopener noreferrer"
+          class={[css(previewCtn, css.raw({ bottom: '13px' })), 'preview-bg']}
+        ></a>
+        <a href={href} target="blank" rel="noopener noreferrer" class={css(previewText, css.raw({ bottom: '18px' }))}>
+          View
+        </a>
       </div>
     </div>
   )

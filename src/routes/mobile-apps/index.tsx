@@ -6,9 +6,9 @@ import { css } from '~/styled-system/css'
 
 export default component$(() => {
   return (
-    <div class={css({ display: 'flex', flexWrap: 'wrap', gap: 35, justifyContent: 'center' })}>
-      {MOBILE_APPS_ARRAY.map((webApp) => (
-        <MobileAppCard key={webApp.title} {...webApp} />
+    <div class={css({ display: 'flex', flexWrap: 'wrap', gap: '45px', justifyContent: 'center' })}>
+      {MOBILE_APPS_ARRAY.map((mobileApp) => (
+        <MobileAppCard key={mobileApp.title} {...mobileApp} />
       ))}
     </div>
   )
