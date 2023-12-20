@@ -2,35 +2,14 @@ import { component$ } from '@builder.io/qwik'
 import { css } from '~/styled-system/css'
 import BatteryCharging from '~/media/icons/battery-charging.svg?jsx'
 import type { JSX } from '@builder.io/qwik/jsx-runtime'
+import { cardCtn, chips, inProgressCtn } from '~/constant/styles'
 
 // Styles
-const cardCtn = css({
-  boxShadow: '0px 0px 20px rgba(0,0,0,0.1)',
-  width: 500,
-  overflow: 'hidden',
-  transition: 'all 0.25s ease-out',
-  position: 'relative',
-  borderRadius: '3px',
-  '&:hover': {
-    boxShadow: '0px 0px 25px rgba(0,0,0,0.16)',
-    transform: 'translateY(-4px)',
-    '& .preview-bg': { width: 125 },
-  },
-})
-
 const textCtn = css({
   padding: 25,
   display: 'flex',
   flexDirection: 'column',
   gap: '20px',
-})
-
-const chips = css({
-  backgroundColor: 'gray.200',
-  padding: '2px 12px 4px',
-  borderRadius: 20,
-  fontSize: 14,
-  color: 'gray.600',
 })
 
 const previewCtn = [
@@ -54,20 +33,6 @@ const previewText = css({
   bottom: '31px',
 })
 
-const inProgressCtn = css({
-  padding: '5px 10px',
-  position: 'absolute',
-  top: '25px',
-  right: '25px',
-  backgroundColor: '#584CD9',
-  color: '#fff',
-  display: 'flex',
-  alignItems: 'center',
-  gap: 2,
-  fontSize: 14,
-  borderRadius: '2px',
-})
-
 // Types
 type TWebAppCardProps = {
   title: string
@@ -81,7 +46,7 @@ type TWebAppCardProps = {
 // Components
 export const WebAppCard = component$<TWebAppCardProps>(({ title, techs, description, href, img, isOnGoing }) => {
   return (
-    <div class={cardCtn}>
+    <div class={css(cardCtn, css.raw({ width: 500, '&:hover': { '& .preview-bg': { width: 125 } } }))}>
       {img}
 
       <div class={textCtn}>
@@ -89,7 +54,7 @@ export const WebAppCard = component$<TWebAppCardProps>(({ title, techs, descript
 
         <div class={css({ display: 'flex', gap: '10px' })}>
           {techs.map((tech) => (
-            <span key={tech} class={chips}>
+            <span key={tech} class={css(chips)}>
               {tech}
             </span>
           ))}
@@ -106,7 +71,7 @@ export const WebAppCard = component$<TWebAppCardProps>(({ title, techs, descript
       </div>
 
       {isOnGoing && (
-        <div class={inProgressCtn}>
+        <div class={css(inProgressCtn)}>
           <BatteryCharging class={css({ width: '18px', height: '18px', borderRadius: 20 })} />
           In Progress
         </div>
