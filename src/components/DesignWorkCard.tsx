@@ -1,6 +1,6 @@
-import { component$ } from '@builder.io/qwik'
+import { component$, useSignal } from '@builder.io/qwik'
 import { css } from '~/styled-system/css'
-import type { JSX } from '@builder.io/qwik/jsx-runtime'
+import { cardImg } from '~/constant/styles'
 
 const cardCtn = css({
   boxShadow: '0px 0px 20px rgba(0,0,0,0.1)',
@@ -44,17 +44,29 @@ const previewText = css({
 type TDesignWorkCardProps = {
   title: string
   href: string
-  img: JSX.Element
+  img: string
+  gif: string
+  width: number
+  height: number
 }
 
-export const DesignWorkCard = component$<TDesignWorkCardProps>(({ title, href, img }) => {
+export const DesignWorkCard = component$<TDesignWorkCardProps>(({ title, href, img, gif, width, height }) => {
+  const showGif = useSignal(false)
+
   return (
-    <div class={cardCtn}>
-      {img}
+    <div class={cardCtn} onMouseEnter$={() => (showGif.value = true)} onMouseLeave$={() => (showGif.value = false)}>
+      <img
+        class={cardImg}
+        width={width}
+        height={height}
+        src={showGif.value ? gif : img}
+        alt={`${showGif.value ? 'Screen recording' : 'Screenshot'} of ${title}`}
+      />
 
       <div class={textCtn}>
         <h2 class={css({ fontSize: 20, color: '#2A538C' })}>{title}</h2>
       </div>
+
       <div class={css({ textAlign: 'right' })}>
         <a href={href} target="blank" rel="noopener noreferrer" class={[previewCtn, 'preview-bg']}></a>
         <a href={href} target="blank" rel="noopener noreferrer" class={previewText}>
