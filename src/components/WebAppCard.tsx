@@ -62,20 +62,16 @@ type TWebAppCardProps = {
 export const WebAppCard = component$<TWebAppCardProps>(({ title, techs, description, href, img, gif, isOnGoing }) => {
   const showGif = useSignal(false)
   return (
-    <div
-      class={cardCtn}
-      onClick$={() => (showGif.value = !showGif.value)}
-      onMouseEnter$={() => (showGif.value = true)}
-      onMouseLeave$={() => (showGif.value = false)}
-    >
+    <div class={cardCtn} onMouseEnter$={() => (showGif.value = true)} onMouseLeave$={() => (showGif.value = false)}>
       <img
         class={cardImg}
         width={500}
         height={283}
         src={showGif.value ? gif : img}
-        alt={`${showGif.value ? 'Screen recording' : 'Screenshot'} of Staff Management Portal`}
+        alt={`${showGif.value ? 'Screen recording' : 'Screenshot'} of ${title}`}
       />
 
+      {/* TODO: add responsive support */}
       <div class={textCtn}>
         <h2 class={css({ fontSize: 22, marginBottom: '-5px', color: '#2A538C' })}>{title}</h2>
 

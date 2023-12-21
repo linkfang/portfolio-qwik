@@ -1,40 +1,42 @@
-import { cardImg } from './styles'
-
-import MusicPlayer from '~/media/music-player.jpg?jsx'
-import NearbyFoods from '~/media/nearby-foods.jpg?jsx'
-import GitHubSearcher from '~/media/github-searcher.jpg?jsx'
-import Tundra from '~/media/tundra.jpg?jsx'
+import musicPlayer from '~/media/music-player.jpg'
+import nearbyFoods from '~/media/nearby-foods.jpg'
+import gitHubSearcher from '~/media/github-searcher.jpg'
+import tundra from '~/media/tundra.jpg'
+import musicPlayerGif from '~/media/music-player.gif'
+import nearbyFoodsGif from '~/media/nearby-foods.gif'
+import gitHubSearcherGif from '~/media/github-searcher.gif'
+import tundraGif from '~/media/tundra.gif'
 
 export const MOBILE_APPS_ARRAY = [
   {
     title: 'Nearby Foods',
-    img: <NearbyFoods class={cardImg} alt="Screenshot of Nearby Foods" />,
+    img: nearbyFoods,
+    gif: nearbyFoodsGif,
     description: '',
-    hover: '',
     href: 'https://github.com/amberyiyao/react-native-yelp',
     techs: ['React Native', 'Yelp API'],
   },
   {
     title: 'Music Player',
-    img: <MusicPlayer class={cardImg} alt="Screenshot of Staff Music Player" />,
+    img: musicPlayer,
+    gif: musicPlayerGif,
     description: '',
-    hover: '',
     href: 'https://github.com/linkfang/player',
     techs: ['Cordova'],
   },
   {
     title: 'Github Searcher',
-    img: <GitHubSearcher class={cardImg} alt="Screenshot of GitHub Searcher" />,
+    img: gitHubSearcher,
+    gif: gitHubSearcherGif,
     description: '',
-    hover: '',
     href: 'https://github.com/linkfang/github-searcher',
     techs: ['Kotlin', 'GitHub API'],
   },
   {
     title: 'Tundra',
-    img: <Tundra class={cardImg} alt="Screenshot of GitHub Searcher" />,
+    img: tundra,
+    gif: tundraGif,
     description: '',
-    hover: '',
     href: 'https://github.com/linkfang/tundra',
     techs: ['Cordova'],
   },

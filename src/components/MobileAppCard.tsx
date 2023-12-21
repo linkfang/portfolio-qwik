@@ -1,8 +1,7 @@
-import { component$ } from '@builder.io/qwik'
+import { component$, useSignal } from '@builder.io/qwik'
 import { css } from '~/styled-system/css'
 import BatteryCharging from '~/media/icons/battery-charging.svg?jsx'
-import type { JSX } from '@builder.io/qwik/jsx-runtime'
-import { chips, inProgressCtn, previewCtn, previewText, textCtn } from '~/constant/styles'
+import { cardImg, chips, inProgressCtn, previewCtn, previewText, textCtn } from '~/constant/styles'
 
 const cardCtn = css({
   boxShadow: '0px 0px 20px rgba(0,0,0,0.1)',
@@ -24,14 +23,23 @@ type TMobileAppCardProps = {
   techs: string[]
   description: string
   href: string
-  img: JSX.Element
+  img: string
+  gif: string
   isOnGoing?: boolean
 }
 
-export const MobileAppCard = component$<TMobileAppCardProps>(({ title, techs, href, img, isOnGoing }) => {
+export const MobileAppCard = component$<TMobileAppCardProps>(({ title, techs, href, img, gif, isOnGoing }) => {
+  const showGif = useSignal(false)
+
   return (
-    <div class={cardCtn}>
-      {img}
+    <div class={cardCtn} onMouseEnter$={() => (showGif.value = true)} onMouseLeave$={() => (showGif.value = false)}>
+      <img
+        class={cardImg}
+        width={300}
+        height={652}
+        src={showGif.value ? gif : img}
+        alt={`${showGif.value ? 'Screen recording' : 'Screenshot'} of ${title}`}
+      />
 
       <div class={textCtn}>
         <h2 class={css({ fontSize: 20, marginBottom: '-5px', color: '#2A538C' })}>{title}</h2>
