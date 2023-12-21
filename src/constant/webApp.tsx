@@ -1,54 +1,62 @@
-import CheerUp from '~/media/cheer-up.jpeg?jsx'
-import HansonAgrochemical from '~/media/hanson-agrochemical.jpeg?jsx'
-import PchemConsulting from '~/media/pchem-consulting.jpeg?jsx'
-import MovieRec from '~/media/movie-recommendation.jpeg?jsx'
-import StaffManagement from '~/media/staff-management.jpeg?jsx'
+/* eslint-disable qwik/jsx-img */
+// Add the disable because of the bug Qwik has
 
-import { cardImg } from './styles'
+import cheerUp from '~/media/cheer-up.jpg'
+import cheerUpGif from '~/media/cheer-up.gif'
+import hansonAgrochemical from '~/media/hanson-agrochemical.jpg'
+import hansonAgrochemicalGif from '~/media/hanson-agrochemical.gif'
+import pchemConsulting from '~/media/pchem-consulting.jpg'
+import pchemConsultingGif from '~/media/pchem-consulting.gif'
+import movieRec from '~/media/movie-rec.jpg'
+import movieRecGif from '~/media/movie-rec.gif'
+import staffManagement from '~/media/staff-management.jpg'
+import staffManagementGif from '~/media/staff-management.gif'
+
+// Window size: 1450px * 823px
 
 export const WEB_APPS_ARRAY = [
   {
     title: 'Staff Management Portal',
-    img: <StaffManagement class={cardImg} alt="Screenshot of Staff Management Portal" />,
+    img: staffManagement,
+    gif: staffManagementGif,
     description:
       'Get a great idea on who are experts on required skills and are ready for next project with a glance. Add/edit individual employee or upload a csv file to create/update multiple ones.',
-    hover: '',
     href: 'https://staff-management-portal.vercel.app/',
     techs: ['Next.js', 'PostgreSQL', 'Prisma', 'tRPC', 'Vercel'],
     isOnGoing: true,
   },
   {
     title: 'Cheer Up',
-    img: <CheerUp class={cardImg} alt="Screenshot of Cheer up" />,
+    img: cheerUp,
+    gif: cheerUpGif,
     description:
       'Login with your spotify account and enjoy personalized recommendation based on your tastes. The beautiful seamless transition makes everything more enjoyable!',
-    hover: '',
     href: 'https://cheerup-ten.vercel.app/',
     techs: ['React', 'Spotify API', 'Single Sign On', 'Vercel', 'Azure'],
   },
   {
     title: 'PChem Consulting Inc.',
-    img: <PchemConsulting class={cardImg} alt="Screenshot of PChem Consulting Inc." />,
+    img: pchemConsulting,
+    gif: pchemConsultingGif,
     description:
       'Well designed UI with responsive support make it pleasant to read and use on both large and small screens .',
-    hover: '',
     href: 'https://www.pchemconsulting.com/',
     techs: ['React', 'GitHub Actions', 'GitHub Pages', 'Vite'],
   },
   {
     title: 'Hanson Agrochemical Consulting',
-    img: <HansonAgrochemical class={cardImg} alt="Screenshot of Hanson Agrochemical Consulting" />,
+    img: hansonAgrochemical,
+    gif: hansonAgrochemicalGif,
     description:
       'Responsive design, multi-language support and elegant transition make it enjoyable to use for more people.',
-    hover: '',
     href: 'http://www.hansonagrochemical.com/',
     techs: ['React', 'GitHub Pages', 'Multi-language'],
   },
   {
     title: 'Movie Recommendation',
-    img: <MovieRec class={cardImg} alt="Screenshot of Movie Recommendation" />,
+    img: movieRec,
+    gif: movieRecGif,
     description: 'Integrated with The Movie DB API to help you find your next favorite movie and TV series!',
-    hover: '',
     href: 'https://linkfang.github.io/API-Project/',
     techs: ['HTML', 'CSS', 'JavaScript', 'The Movie DB API'],
   },
