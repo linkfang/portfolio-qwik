@@ -22,10 +22,16 @@ html {
     "Noto Color Emoji";
 }
 
-body{
+body {
   min-height: 100svh;
   padding: 0 60px 120px 60px;
   position: relative;
   background-image: url("/bg.png");
   background-attachment: fixed;
+}
+
+@media (max-width: 880px) {
+  body {
+    padding: 0 20px 160px 20px;
+  }
 }

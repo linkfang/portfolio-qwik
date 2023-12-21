@@ -71,11 +71,10 @@ export const WebAppCard = component$<TWebAppCardProps>(({ title, techs, descript
         alt={`${showGif.value ? 'Screen recording' : 'Screenshot'} of ${title}`}
       />
 
-      {/* TODO: add responsive support */}
       <div class={textCtn}>
         <h2 class={css({ fontSize: 22, marginBottom: '-5px', color: '#2A538C' })}>{title}</h2>
 
-        <div class={css({ display: 'flex', gap: '10px' })}>
+        <div class={css({ display: 'flex', gap: '10px', flexWrap: 'wrap' })}>
           {techs.map((tech) => (
             <span key={tech} class={chips}>
               {tech}
