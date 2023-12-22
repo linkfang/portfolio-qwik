@@ -12,7 +12,7 @@ import movieRecGif from '~/media/movie-rec.gif'
 import staffManagement from '~/media/staff-management.jpg'
 import staffManagementGif from '~/media/staff-management.gif'
 
-// Window size: 1450px * 823px
+// Window size for gif recording: 1450px * 823px
 
 export const WEB_APPS_ARRAY = [
   {

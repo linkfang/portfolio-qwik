@@ -33,13 +33,14 @@ export const MobileAppCard = component$<TMobileAppCardProps>(({ title, techs, hr
 
   return (
     <div class={cardCtn} onMouseEnter$={() => (showGif.value = true)} onMouseLeave$={() => (showGif.value = false)}>
-      <img
-        class={cardImg}
-        width={300}
-        height={652}
-        src={showGif.value ? gif : img}
-        alt={`${showGif.value ? 'Screen recording' : 'Screenshot'} of ${title}`}
-      />
+      <div class={css({ height: '652px', overflow: 'hidden', ...cardImg })}>
+        <img
+          width={300}
+          height={652}
+          src={showGif.value ? gif : img}
+          alt={`${showGif.value ? 'Screen recording' : 'Screenshot'} of ${title}`}
+        />
+      </div>
 
       <div class={textCtn}>
         <h2 class={css({ fontSize: 20, marginBottom: '-5px', color: '#2A538C' })}>{title}</h2>

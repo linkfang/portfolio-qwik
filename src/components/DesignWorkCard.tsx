@@ -56,7 +56,7 @@ export const DesignWorkCard = component$<TDesignWorkCardProps>(({ title, href, i
   return (
     <div class={cardCtn} onMouseEnter$={() => (showGif.value = true)} onMouseLeave$={() => (showGif.value = false)}>
       <img
-        class={cardImg}
+        class={css(cardImg)}
         width={width}
         height={height}
         src={showGif.value ? gif : img}

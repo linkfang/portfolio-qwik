@@ -63,13 +63,14 @@ export const WebAppCard = component$<TWebAppCardProps>(({ title, techs, descript
   const showGif = useSignal(false)
   return (
     <div class={cardCtn} onMouseEnter$={() => (showGif.value = true)} onMouseLeave$={() => (showGif.value = false)}>
-      <img
-        class={cardImg}
-        width={500}
-        height={283}
-        src={showGif.value ? gif : img}
-        alt={`${showGif.value ? 'Screen recording' : 'Screenshot'} of ${title}`}
-      />
+      <div class={css({ height: '283px', overflow: 'hidden', ...cardImg })}>
+        <img
+          width={500}
+          height={283}
+          src={showGif.value ? gif : img}
+          alt={`${showGif.value ? 'Screen recording' : 'Screenshot'} of ${title}`}
+        />
+      </div>
 
       <div class={textCtn}>
         <h2 class={css({ fontSize: 22, marginBottom: '-5px', color: '#2A538C' })}>{title}</h2>
