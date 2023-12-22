@@ -1,6 +1,5 @@
 import { component$, useSignal } from '@builder.io/qwik'
 import { css } from '~/styled-system/css'
-import { cardImg } from '~/constant/styles'
 
 const cardCtn = css({
   boxShadow: '0px 0px 20px rgba(0,0,0,0.1)',
@@ -56,7 +55,7 @@ export const DesignWorkCard = component$<TDesignWorkCardProps>(({ title, href, i
   return (
     <div class={cardCtn} onMouseEnter$={() => (showGif.value = true)} onMouseLeave$={() => (showGif.value = false)}>
       <img
-        class={css(cardImg)}
+        class={css({ borderBottom: '3px solid black', borderImage: 'linear-gradient(to right, #b3d3ff, #b3f0ff) 30' })}
         width={width}
         height={height}
         src={showGif.value ? gif : img}

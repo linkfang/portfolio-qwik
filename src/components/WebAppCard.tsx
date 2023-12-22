@@ -1,7 +1,7 @@
 import { component$, useSignal } from '@builder.io/qwik'
 import { css } from '~/styled-system/css'
 import BatteryCharging from '~/media/icons/battery-charging.svg?jsx'
-import { cardImg, chips, inProgressCtn } from '~/constant/styles'
+import { chips, inProgressCtn } from '~/constant/styles'
 
 // Styles
 const cardCtn = css({
@@ -63,7 +63,14 @@ export const WebAppCard = component$<TWebAppCardProps>(({ title, techs, descript
   const showGif = useSignal(false)
   return (
     <div class={cardCtn} onMouseEnter$={() => (showGif.value = true)} onMouseLeave$={() => (showGif.value = false)}>
-      <div class={css({ height: '283px', overflow: 'hidden', ...cardImg })}>
+      <div
+        class={css({
+          height: '283px',
+          overflow: 'hidden',
+          borderBottom: '3px solid black',
+          borderImage: 'linear-gradient(to right, #b3d3ff, #b3f0ff) 30',
+        })}
+      >
         <img
           width={500}
           height={283}

@@ -46,8 +46,3 @@ export const inProgressCtn = css({
   fontSize: 14,
   borderRadius: '2px',
 })
-
-export const cardImg = {
-  borderBottom: '3px solid black',
-  borderImage: 'linear-gradient(to right, #b3d3ff, #b3f0ff) 30',
-} as const
