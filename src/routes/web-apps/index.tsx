@@ -21,5 +21,18 @@ export const head: DocumentHead = {
       name: 'description',
       content: `Zhou's portfolio. It contains most Zhou's personal web app projects, which has elegant transition and animation and great performance`,
     },
+    {
+      property: 'og:title',
+      content: `Zhou's Portfolio`,
+    },
+    {
+      property: 'og:description',
+      content:
+        'Zhou can do it all! Web development, mobile development, backend development and design. And Zhou also writes blogs to share his experience and insights on programming.',
+    },
+    {
+      property: 'og:image',
+      content: '/website-preview.jpg',
+    },
   ],
 }
