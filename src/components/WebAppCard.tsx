@@ -65,7 +65,7 @@ export const WebAppCard = component$<TWebAppCardProps>(({ title, techs, descript
     <div class={cardCtn} onMouseEnter$={() => (showGif.value = true)} onMouseLeave$={() => (showGif.value = false)}>
       <div
         class={css({
-          height: '283px',
+          maxHeight: 'min(calc(56.6vw - 30px), 283px)',
           overflow: 'hidden',
           borderBottom: '3px solid black',
           borderImage: 'linear-gradient(to right, #b3d3ff, #b3f0ff) 30',
