@@ -1,15 +1,15 @@
 /* eslint-disable qwik/jsx-img */
 // Add the disable because of the bug Qwik has
 
-import cheerUp from '~/media/cheer-up.jpg'
+import cheerUp from '~/media/cheer-up.webp'
 import cheerUpGif from '~/media/cheer-up.gif'
-import hansonAgrochemical from '~/media/hanson-agrochemical.jpg'
+import hansonAgrochemical from '~/media/hanson-agrochemical.webp'
 import hansonAgrochemicalGif from '~/media/hanson-agrochemical.gif'
-import pchemConsulting from '~/media/pchem-consulting.jpg'
+import pchemConsulting from '~/media/pchem-consulting.webp'
 import pchemConsultingGif from '~/media/pchem-consulting.gif'
-import movieRec from '~/media/movie-rec.jpg'
+import movieRec from '~/media/movie-rec.webp'
 import movieRecGif from '~/media/movie-rec.gif'
-import staffManagement from '~/media/staff-management.jpg'
+import staffManagement from '~/media/staff-management.webp'
 import staffManagementGif from '~/media/staff-management.gif'
 
 // Window size for gif recording: 1450px * 823px

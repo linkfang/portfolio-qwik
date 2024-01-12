@@ -1,10 +1,10 @@
-import selfCheckout from '~/media/self-checkout.jpg'
+import selfCheckout from '~/media/self-checkout.webp'
 import selfCheckoutGif from '~/media/self-checkout.gif'
-import flowerDelivery from '~/media/flower-delivery.jpg'
+import flowerDelivery from '~/media/flower-delivery.webp'
 import flowerDeliveryGif from '~/media/flower-delivery.gif'
-import instantTutor from '~/media/instant-tutor.jpg'
+import instantTutor from '~/media/instant-tutor.webp'
 import instantTutorGif from '~/media/instant-tutor.gif'
-import groupStudy from '~/media/group-study.jpg'
+import groupStudy from '~/media/group-study.webp'
 import groupStudyGif from '~/media/group-study.gif'
 
 export const DESIGN_WORKS_ARRAY = [
