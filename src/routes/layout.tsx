@@ -147,7 +147,12 @@ export default component$(() => {
 
         <ul class={socialMenuCtn}>
           <li class={menuItemCtn}>
-            <a href="https://www.linkedin.com/in/linkfang/" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.linkedin.com/in/linkfang/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Zhou's LinkedIn"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="23"
@@ -161,7 +166,7 @@ export default component$(() => {
           </li>
 
           <li class={menuItemCtn}>
-            <a href="https://github.com/linkfang" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/linkfang" target="_blank" rel="noopener noreferrer" aria-label="Zhou's GitHub">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="23"
@@ -175,7 +180,12 @@ export default component$(() => {
           </li>
 
           <li class={menuItemCtn}>
-            <a href="https://medium.com/@linkfang" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://medium.com/@linkfang"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Zhou's Medium blog"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="23"

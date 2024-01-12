@@ -18,7 +18,7 @@ export const Footer = component$(() => {
       })}
     >
       Built with Qwik
-      <a href="https://qwik.builder.io/" target="_blank" rel="noopener noreferrer">
+      <a href="https://qwik.builder.io/" target="_blank" rel="noopener noreferrer" aria-label="Qwik website">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 500 500" width="30px">
           <g clip-path="url(#a)">
             <circle cx="250" cy="250" r="250" fill="#fff" />
@@ -43,7 +43,7 @@ export const Footer = component$(() => {
         </svg>
       </a>
       + <span class={css({ margin: '0 5px' })}>Panda</span>
-      <a href="https://panda-css.com/" target="_blank" rel="noopener noreferrer">
+      <a href="https://panda-css.com/" target="_blank" rel="noopener noreferrer" aria-label="Panda CSS website">
         <svg width="78" viewBox="0 0 124 34" fill="none" xmlns="http://www.w3.org/2000/svg" data-scope="icon">
           <path
             d="M41.5908 30.4605H45.784V23.0439H46.0122C46.7254 24.7839 48.4939 25.982 50.8615 25.982C54.5128 25.982 56.9944 23.3006 56.9944 18.052C56.9944 12.7748 54.5128 10.122 50.8615 10.122C48.4939 10.122 46.7254 11.2915 46.0122 13.0601H45.784L45.6414 10.4072H41.5908V30.4605ZM49.2926 22.5875C46.925 22.5875 45.8411 20.7334 45.8411 18.7936V17.3103C45.8411 15.3706 46.925 13.5165 49.2926 13.5165C51.3465 13.5165 52.6871 14.9427 52.6871 18.052C52.6871 21.1612 51.3465 22.5875 49.2926 22.5875Z"

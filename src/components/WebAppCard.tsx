@@ -93,7 +93,13 @@ export const WebAppCard = component$<TWebAppCardProps>(({ title, techs, descript
         <p class={css({ color: 'gray.600' })}>{description}</p>
 
         <div class={css({ textAlign: 'right', height: '30px' })}>
-          <a href={href} target="blank" rel="noopener noreferrer" class={previewCtn}></a>
+          <a
+            href={href}
+            target="blank"
+            rel="noopener noreferrer"
+            class={previewCtn}
+            aria-label={`Try out ${title}`}
+          ></a>
           <a href={href} target="blank" rel="noopener noreferrer" class={previewText}>
             Try it out
           </a>

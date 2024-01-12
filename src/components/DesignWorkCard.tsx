@@ -67,7 +67,13 @@ export const DesignWorkCard = component$<TDesignWorkCardProps>(({ title, href, i
       </div>
 
       <div class={css({ textAlign: 'right' })}>
-        <a href={href} target="blank" rel="noopener noreferrer" class={[previewCtn, 'preview-bg']}></a>
+        <a
+          href={href}
+          target="blank"
+          rel="noopener noreferrer"
+          class={[previewCtn, 'preview-bg']}
+          aria-label={`View more of ${title}`}
+        ></a>
         <a href={href} target="blank" rel="noopener noreferrer" class={previewText}>
           View
         </a>
