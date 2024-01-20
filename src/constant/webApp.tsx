@@ -23,7 +23,6 @@ export const WEB_APPS_ARRAY = [
       'Get a great idea on who are experts on required skills and are ready for next project with a glance. Add/edit individual employee or upload a csv file to create/update multiple ones.',
     href: 'https://staff-management-portal.vercel.app/',
     techs: ['Next.js', 'PostgreSQL', 'Prisma', 'tRPC', 'Vercel'],
-    isOnGoing: true,
   },
   {
     title: 'Cheer Up',
