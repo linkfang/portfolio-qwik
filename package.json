@@ -1,6 +1,6 @@
 {
   "name": "zhou-portfolio",
-  "description": "Zhou's portfolio web app",
+  "description": "Zhou's portfolio",
   "engines": {
     "node": ">=15.0.0"
   },
