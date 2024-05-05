@@ -36,14 +36,25 @@ export const MobileAppCard = component$<TMobileAppCardProps>(
 
     return (
       <div
-        class={[
-          cardCtn,
-          css({
-            '&:hover': {
-              '& .preview-bg': { width: buttonText ? 95 : 90 },
-            },
-          }),
-        ]}
+        class={
+          buttonText
+            ? [
+                cardCtn,
+                css({
+                  '&:hover': {
+                    '& .preview-bg': { width: 95 },
+                  },
+                }),
+              ]
+            : [
+                cardCtn,
+                css({
+                  '&:hover': {
+                    '& .preview-bg': { width: 90 },
+                  },
+                }),
+              ]
+        }
         onMouseEnter$={() => (showGif.value = true)}
         onMouseLeave$={() => (showGif.value = false)}
       >
@@ -103,7 +114,7 @@ export const MobileAppCard = component$<TMobileAppCardProps>(
               href={href}
               target="blank"
               rel="noopener noreferrer"
-              class={[previewText, css({ right: buttonText ? '14px' : '25px' })]}
+              class={buttonText ? [previewText, css({ right: '14px' })] : [previewText, css({ right: '25px' })]}
             >
               {buttonText ?? 'Repo'}
             </a>
