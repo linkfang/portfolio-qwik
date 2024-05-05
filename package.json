@@ -6,7 +6,10 @@
   },
   "private": true,
   "trustedDependencies": [
-    "sharp"
+    "deasync",
+    "esbuild",
+    "sharp",
+    "vercel"
   ],
   "type": "module",
   "scripts": {
