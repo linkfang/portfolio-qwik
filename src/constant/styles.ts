@@ -5,6 +5,7 @@ export const textCtn = css({
   display: 'flex',
   flexDirection: 'column',
   gap: '10px',
+  flex: 1,
 })
 
 export const previewCtn = css({
