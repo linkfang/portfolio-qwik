@@ -17,7 +17,7 @@ export const MOBILE_APPS_ARRAY = [
     description: '',
     href: 'https://apps.apple.com/in/app/little-tomato/id6477897859?platform=iphone',
     buttonText: 'App Store',
-    techs: ['React Native/Expo', 'Reanimated', 'Flashlist'],
+    techs: ['React Native/Expo', 'Reanimated', 'FlashList'],
   },
   {
     title: 'Nearby Foods',
