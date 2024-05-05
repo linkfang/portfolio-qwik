@@ -22,7 +22,6 @@ export const previewCtn = css({
 export const previewText = css({
   position: 'absolute',
   color: '#1A3966',
-  right: '25px',
   bottom: '33px',
 })
 
